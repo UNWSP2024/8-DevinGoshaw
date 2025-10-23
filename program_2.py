@@ -11,12 +11,17 @@ def word_separator(sentence):
 
     new_sentence = ""
     #    Add your logic here
-
+    for i, char in enumerate(sentence):
+        if char.isupper() and i !=0:
+            new_sentence +=" "+char.lower()
+        else:
+            new_sentence+=char
+   
     return new_sentence.strip()
 
 # Example usage
 
-sentence = "StopAndSmellTheRoses"
+sentence=input("enter your sentence without spaces(new word should start with a capital letter):")
 
 new_sentence = word_separator(sentence)
 
